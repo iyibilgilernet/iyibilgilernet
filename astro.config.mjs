@@ -4,5 +4,6 @@ import { defineConfig } from 'astro/config';
 
 export default defineConfig({
   site: 'https://iyibilgilernet.github.io',
-  base: '/',  // Burası sadece '/' olmalı, eski ismi sil!
+  base: '/', // Burası ARTIK boş kalmalı (sadece slash)
+  outDir: 'dist',
 });
