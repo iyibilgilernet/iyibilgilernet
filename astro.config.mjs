@@ -1,10 +1,8 @@
 // @ts-check
 
-import mdx from '@astrojs/mdx';
-import sitemap from '@astrojs/sitemap';
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-    site: 'https://iyibilgilernet.github.io', // Burayı böyle yap
-    integrations: [mdx(), sitemap()],
+  site: 'https://iyibilgilernet.github.io',
+  base: '/',  // Burası sadece '/' olmalı, eski ismi sil!
 });
