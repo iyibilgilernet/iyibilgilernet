@@ -2,24 +2,28 @@
 import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE } from '../consts';
 
+// Logonun adresi (YouTube profil resmin)
+const LOGO_URL = "https://yt3.ggpht.com/2sgkRjrr89YgkjgGoN-YxOuTDPthLN22os716aj_ASqTPhFRCtEJKU0zqK71f16IruiLUESMRgc=s48-c-k-c0x00ffffff-no-rj"; 
+// Senin YouTube Kanal Linkin
+const YOUTUBE_KANAL_LINKI = "https://www.youtube.com/@iyibilgilernet"; 
 ---
 
-<header class="bg-white shadow-md">
-	<nav class="container mx-auto px-4 py-3 flex items-center justify-between">
-		<div class="flex items-center space-x-3">
-			<div class="bg-orange-600 text-white font-bold p-2 rounded-lg text-xl">İYİ   🦓</div>
-			<h2 class="text-xl font-black tracking-tighter m-0 uppercase">
-				<a href="/" class="text-slate-900 no-underline hover:text-orange-600 transition-colors">iyibilgilernet</a>
-			</h2>
-		</div>
-		<div class="hidden md:flex space-x-6 font-semibold">
-			<HeaderLink href="/" class="hover:text-orange-600">Ana Sayfa</HeaderLink>
-			<HeaderLink href="/blog" class="hover:text-orange-600">Tarifler</HeaderLink>
-			<HeaderLink href="/about" class="hover:text-orange-600">Hakkımızda</HeaderLink>
-		</div>
-		<div class="flex space-x-4">
-			<a href="https://youtube.com/@iyibilgilernet" target="_blank" class="text-red-600 text-2xl hover:scale-110 transition-transform">🔴</a>
-			<a href="https://tiktok.com/@iyibilgilernet" target="_blank" class="text-black text-2xl hover:scale-110 transition-transform">📱</a>
-		</div>
-	</nav>
+<header>
+    <nav style="display: flex; align-items: center; justify-content: space-between;">
+        <h2 style="margin: 0;">
+            <a href="/" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit;">
+                <img src={LOGO_URL} alt="Logo" style="height: 40px; border-radius: 50%;" />
+                {SITE_TITLE}
+            </a>
+        </h2>
+
+        <div class="internal-links" style="display: flex; align-items: center; gap: 15px;">
+            <HeaderLink href="/">Ana Sayfa</HeaderLink>
+            <HeaderLink href="/blog">Blog</HeaderLink>
+            
+            <a href={YOUTUBE_KANAL_LINKI} target="_blank" style="background: #ff0000; color: white; padding: 5px 12px; border-radius: 20px; text-decoration: none; font-size: 14px; font-weight: bold;">
+                Abone Ol
+            </a>
+        </div>
+    </nav>
 </header>
