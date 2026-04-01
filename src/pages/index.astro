@@ -1,109 +1,25 @@
 ---
-// Burayı boş bırakıyoruz, hata riskini sıfırlıyoruz.
+import Layout from '../layouts/BlogPost.astro';
 ---
 
-<html lang="tr">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<title>iyibilgilernet | Hoş Geldiniz</title>
-	</head>
-	<body>
-		<main>
-			<h1>Hoş Geldiniz, <span class="text-gradient">iyibilgilernet</span></h1>
-			<p class="subtitle">Güncel bilgiler, ipuçları ve hayatın içinden esintiler.</p>
+<Layout
+	title="iyibilgilernet | Hayatın Esintisi"
+	description="Faydalı bilgiler, yemek tarifleri ve yaşam rehberi."
+	pubDate={new Date('April 01 2026')}
+	heroImage="/blog-placeholder-about.jpg"
+>
+	<h1 class="text-3xl font-bold text-orange-600">Hoş Geldiniz!</h1>
+	<p>
+		<strong>iyibilgilernet</strong> platformu olarak, size en pratik bilgileri ve 
+		en lezzetli tarifleri sunmak için buradayız.
+	</p>
+	
+	<div class="bg-slate-100 p-6 rounded-xl my-8 border-l-4 border-orange-500">
+		<h2 class="text-xl font-semibold">Son Videolarımız</h2>
+		<p>YouTube kanalımızdaki en yeni içeriklere buradan ulaşabilirsiniz.</p>
+		</div>
 
-			<!-- ÖNE ÇIKAN VİDEO BÖLÜMÜ -->
-			<section class="video-container">
-				<h2>Son Paylaşılan Video</h2>
-				<div class="video-wrapper"><iframe width="560" height="315" src="https://www.youtube.com/embed/ZuRrZ1Q-f3I?si=_vWvZfm2AMHmMSwj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-				</div>
-			</section>
-
-			<!-- SOSYAL MEDYA BUTONLARI -->
-			<section class="social-links">
-				<a href="https://www.youtube.com/@iyibilgilernet" target="_blank" class="btn youtube">YouTube</a>
-				<a href="https://www.instagram.com/iyibilgilernet" target="_blank" class="btn instagram">Instagram</a>
-				<a href="https://www.tiktok.com/@iyibilgilernet" target="_blank" class="btn tiktok">TikTok</a>
-			</section>
-		</main>
-
-		<style>
-			:root {
-				--accent: 124, 58, 237;
-				--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
-			}
-			html {
-				font-family: system-ui, sans-serif;
-				background-color: #13151a;
-				color: white;
-			}
-			body { margin: 0; padding: 0; }
-			main {
-    margin: auto;
-    padding: 2rem 1rem;
-    width: 100%; /* Sabit genişlik yerine tam ekran yapalım */
-    max-width: 800px; /* Ama çok da yayılmasın */
-    box-sizing: border-box;
-}
-			h1 {
-    font-size: clamp(1.5rem, 5vw, 2.2rem); /* Ekran küçüldükçe yazı da küçülür */
-    word-wrap: break-word;
-    white-space: normal; /* Harflerin alta kaymasını engeller, kelimeyi bütün tutar */
-}
-			.text-gradient {
-				background-image: var(--accent-gradient);
-				-webkit-background-clip: text;
-				-webkit-text-fill-color: transparent;
-				background-size: 400%;
-				background-position: 0%;
-			}
-			.subtitle {
-				font-size: 1rem;
-				color: #a1a1a1;
-				margin-bottom: 2rem;
-			}
-			.video-container {
-				background: #1e2029;
-				padding: 15px;
-				border-radius: 20px;
-				border: 1px solid #333;
-			}
-			.video-wrapper {
-				position: relative;
-				padding-bottom: 56.25%;
-				height: 0;
-				overflow: hidden;
-				border-radius: 12px;
-			}
-			.video-wrapper iframe {
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-			}
-			.social-links {
-				margin-top: 2rem;
-				display: flex;
-				justify-content: center;
-				gap: 10px;
-				flex-wrap: wrap;
-			}
-			.btn {
-				padding: 8px 20px;
-				border-radius: 50px;
-				text-decoration: none;
-				font-weight: 600;
-				color: white;
-				font-size: 0.9rem;
-				transition: 0.2s;
-			}
-			.youtube { background: #cc0000; }
-			.instagram { background: #c13584; }
-			.tiktok { background: #010101; border: 1px solid #444; }
-			.btn:hover { transform: scale(1.05); opacity: 0.9; }
-		</style>
-	</body>
-</html>
+	<p>
+		İçeriklerimizi kaçırmamak için bizi sosyal medya hesaplarımızdan takip etmeyi unutmayın!
+	</p>
+</Layout>
