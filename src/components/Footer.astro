@@ -1,13 +1,48 @@
 ---
 const today = new Date();
+// Buraya yine o meşhur renkleri ve ikonları tanımlıyoruz
 ---
 
-<footer class="bg-slate-900 text-slate-400 py-10 text-center mt-20">
-	<p>&copy; {today.getFullYear()} <strong>iyibilgilernet</strong>. Tüm Hakları Saklıdır.</p>
-	<p class="text-xs mt-2">İyibilgilernet & Faydalı Bilgiler Portalı</p>
-	<div class="flex justify-center space-x-6 mt-4">
-		<a href="https://youtube.com/@iyibilgilernet" class="hover:text-white">YouTube</a>&nbsp;&nbsp;&nbsp;
-		<a href="https://tiktok.com/@iyibilgilernet" class="hover:text-white">TikTok</a>&nbsp;&nbsp;&nbsp;
-		<a href="https://instagram.com/iyibilgilernet" class="hover:text-white">Instagram</a>&nbsp;&nbsp;&nbsp;
+<footer style="padding: 40px 20px; text-align: center; background: #f9fafb; border-top: 1px solid #e5e7eb;">
+	<p>&copy; {today.getFullYear()} iyibilgilernet. Tüm hakları saklıdır.</p>
+	
+	<div class="social-links" style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-top: 20px;">
+		
+		<a href="#" target="_blank" title="YouTube" style="color: #FF0000; font-size: 24px;"><i class="fa-brands fa-youtube"></i></a>
+		
+		<a href="#" target="_blank" title="TikTok" style="color: #000000; font-size: 24px;"><i class="fa-brands fa-tiktok"></i></a>
+		
+		<a href="#" target="_blank" title="Instagram" style="color: #E4405F; font-size: 24px;"><i class="fa-brands fa-instagram"></i></a>
+		
+		<a href="#" target="_blank" title="Facebook" style="color: #1877F2; font-size: 24px;"><i class="fa-brands fa-facebook"></i></a>
+		
+		<a href="#" target="_blank" title="X" style="color: #000000; font-size: 24px;"><i class="fa-brands fa-x-twitter"></i></a>
+		
+		<a href="#" target="_blank" title="Pinterest" style="color: #BD081C; font-size: 24px;"><i class="fa-brands fa-pinterest"></i></a>
+		
+		<a href="#" target="_blank" title="WhatsApp" style="color: #25D366; font-size: 24px;"><i class="fa-brands fa-whatsapp"></i></a>
+		
+		<a href="#" target="_blank" title="Telegram" style="color: #26A5E4; font-size: 24px;"><i class="fa-brands fa-telegram"></i></a>
+		
+		<a href="#" target="_blank" title="LinkedIn" style="color: #0A66C2; font-size: 24px;"><i class="fa-brands fa-linkedin"></i></a>
+		
+		<a href="#" target="_blank" title="Threads" style="color: #000000; font-size: 24px;"><i class="fa-brands fa-threads"></i></a>
+		
+		<a href="#" target="_blank" title="Snapchat" style="color: #FFFC00; text-shadow: 0 0 1px #000; font-size: 24px;"><i class="fa-brands fa-snapchat"></i></a>
+		
+		<a href="#" target="_blank" title="Web" style="color: #6366f1; font-size: 24px;"><i class="fa-solid fa-globe"></i></a>
+
 	</div>
 </footer>
+
+<style>
+	/* Mouse ile üzerine gelince ikonların canlanması */
+	.social-links a {
+		transition: transform 0.3s ease, opacity 0.3s ease;
+		text-decoration: none;
+	}
+	.social-links a:hover {
+		transform: translateY(-5px); /* Hafif yukarı zıplama efekti */
+		opacity: 0.8;
+	}
+</style>
